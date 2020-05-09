@@ -15,7 +15,7 @@ jobs:
     - name: Checkout SourceForge xHarbour repo
       uses: actions/checkout@v2
       with:
-       repository: https://svn.code.sf.net/p/xharbour/svn
+       repository: {sourceforge}/{xharbour}
        path: xharbour
 
     - name: Install dependencies
