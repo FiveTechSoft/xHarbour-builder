@@ -31,7 +31,7 @@ jobs:
     - name: Compile xHarbour
       shell: cmd
       run: |
-        set path=c:\bcc7\bin
+        set path=c:\bcc7\bin;%path%
         cd c:\xharbour
         dir *.bat
         make_bc.bat
