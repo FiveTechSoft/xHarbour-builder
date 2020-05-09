@@ -1,6 +1,7 @@
 name: xHarbour for Windows 32 using BCC
 
 on:
+  push:    
   watch:
    types: [started]
 
