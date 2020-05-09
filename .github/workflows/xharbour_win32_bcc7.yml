@@ -32,8 +32,8 @@ jobs:
     - name: Compile xHarbour
       shell: cmd
       run: |
-        cd xharbour
         set path=c:\bcc7\bin
+        cd c:\xharbour
         make_bc.bat
         
     - name: Create output folders
