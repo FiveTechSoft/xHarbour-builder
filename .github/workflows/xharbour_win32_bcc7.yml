@@ -27,10 +27,10 @@ jobs:
          (new-object System.Net.WebClient).DownloadFile('https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/acesdk.zip', 'C:\temp\acesdk.zip')
          Expand-Archive -LiteralPath C:\temp\acesdk.zip -DestinationPath C:\acesdk -Force
          
-    - name: Compile Harbour
+    - name: Compile xHarbour
       shell: cmd
       run: |
-        cd harbour
+        cd xharbour
         set path=c:\bcc7\bin
         set HB_BUILD_MODE=c
         set HB_USER_PRGFLAGS=-l-
@@ -49,11 +49,11 @@ jobs:
       run: |
         mkdir output
         mkdir output\bin
-        copy harbour\bin\win\bcc\*.exe output\bin
+        copy xharbour\bin\win\bcc\*.exe output\bin
         mkdir output\lib
-        copy harbour\lib\win\bcc\*.lib output\lib
+        copy xharbour\lib\win\bcc\*.lib output\lib
         mkdir output\include 
-        copy harbour\include output\include
+        copy xharbour\include output\include
         
     - name: Get current time
       uses: srfrnk/current-time@master
@@ -61,10 +61,10 @@ jobs:
       with:
         format: YYYY_MM_DD
  
-    - name: Upload Harbour to artifact
+    - name: Upload xHarbour to artifact
       env:
          TIME: "${{ steps.current-time.outputs.formattedTime }}"
       uses: actions/upload-artifact@v2
       with:
-       name: harbour_win32_bcc_${{ env.TIME }}
+       name: xharbour_win32_bcc_${{ env.TIME }}
        path: output
