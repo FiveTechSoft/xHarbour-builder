@@ -10,12 +10,6 @@ jobs:
     runs-on: windows-latest
     
     if: github.actor == github.event.repository.owner.login
-    
-    steps:    
-    - name: Checkout SourceForge xHarbour repo
-      shell: cmd
-      run: |
-        svn co https://svn.code.sf.net/p/xharbour/code/trunk/xharbour c:\xharbour
 
     - name: Install dependencies
       run: |
@@ -31,6 +25,7 @@ jobs:
     - name: Compile xHarbour
       shell: cmd
       run: |
+        svn co https://svn.code.sf.net/p/xharbour/code/trunk/xharbour c:\xharbour
         set path=c:\bcc7\bin;%path%
         cd c:\xharbour
         dir *.bat
