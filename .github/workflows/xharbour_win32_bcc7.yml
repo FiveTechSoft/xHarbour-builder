@@ -31,7 +31,7 @@ jobs:
       run: |
         set path=c:\bcc7\bin;%path%
         cd c:\xharbour
-        c:\xharbour\make_bc.bat
+        c:\xharbour\make_bc.bat core
         
     - name: Create output folders
       shell: cmd
