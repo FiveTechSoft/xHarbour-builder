@@ -13,7 +13,9 @@ jobs:
     
     steps:    
     - name: Checkout SourceForge xHarbour repo
+      shell: cmd
       run: |
+        choco install svn
         svn checkout https://svn.code.sf.net/p/xharbour/svn/ c:\xharbour
 
     - name: Install dependencies
