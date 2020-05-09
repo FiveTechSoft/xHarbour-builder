@@ -15,7 +15,7 @@ jobs:
     - name: Checkout SourceForge xHarbour repo
       shell: cmd
       run: |
-        svn checkout https://svn.code.sf.net/p/xharbour/svn/ c:\xharbour
+        svn co https://svn.code.sf.net/p/xharbour/code/trunk/xharbour c:\xharbour
 
     - name: Install dependencies
       run: |
