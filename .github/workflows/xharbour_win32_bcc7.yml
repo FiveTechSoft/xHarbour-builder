@@ -13,10 +13,8 @@ jobs:
     
     steps:    
     - name: Checkout SourceForge xHarbour repo
-      uses: actions/checkout@v2
-      with:
-       repository: {sourceforge}/{xharbour}
-       path: xharbour
+      run: |
+        svn checkout https://svn.code.sf.net/p/xharbour/svn/ c:\xharbour
 
     - name: Install dependencies
       run: |
