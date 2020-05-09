@@ -11,11 +11,11 @@ jobs:
     if: github.actor == github.event.repository.owner.login
     
     steps:    
-    - name: Checkout https://svn.code.sf.net/p/xharbour/svn repo
+    - name: Checkout SourceForge xHarbour repo
       uses: actions/checkout@v2
       with:
-       repository: harbour/core
-       path: harbour
+       repository: https://svn.code.sf.net/p/xharbour/svn
+       path: xharbour
 
     - name: Install dependencies
       run: |
