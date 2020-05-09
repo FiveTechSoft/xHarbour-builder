@@ -24,7 +24,6 @@ jobs:
          (new-object System.Net.WebClient).DownloadFile('https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/acesdk.zip', 'C:\temp\acesdk.zip')
          Expand-Archive -LiteralPath C:\temp\acesdk.zip -DestinationPath C:\acesdk -Force
          svn co https://svn.code.sf.net/p/xharbour/code/trunk/xharbour c:\xharbour
-         (Get-Content -path c:\xharbour\make_bc.bat) -replace 'notepad','echo' | Set-Content -path c:\xharbour\make_bc.bat
          
     - name: Compile xHarbour
       shell: cmd
