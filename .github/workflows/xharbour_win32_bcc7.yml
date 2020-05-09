@@ -1,4 +1,4 @@
-name: Harbour for Windows 32 using BCC
+name: xHarbour for Windows 32 using BCC
 
 on:
   watch:
@@ -11,7 +11,7 @@ jobs:
     if: github.actor == github.event.repository.owner.login
     
     steps:    
-    - name: Checkout harbour/core repo
+    - name: Checkout https://svn.code.sf.net/p/xharbour/svn repo
       uses: actions/checkout@v2
       with:
        repository: harbour/core
