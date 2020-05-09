@@ -30,8 +30,7 @@ jobs:
         svn co https://svn.code.sf.net/p/xharbour/code/trunk/xharbour c:\xharbour
         set path=c:\bcc7\bin;%path%
         cd c:\xharbour
-        dir *.bat
-        make_bc.bat
+        c:\xharbour\make_bc.bat
         
     - name: Create output folders
       shell: cmd
